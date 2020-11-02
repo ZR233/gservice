@@ -1,0 +1,2 @@
+# gservice
+rpc service manager
