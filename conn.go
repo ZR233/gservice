@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"io"
 	"sync"
+	"time"
 )
 
 // 判断连接是否可用
@@ -153,6 +154,7 @@ func (c *connPool) flushConn() (err error) {
 				return
 			}
 			c.setConnList(once)
+			time.Sleep(time.Second)
 		}
 	}()
 	err = <-c.firstFlush
