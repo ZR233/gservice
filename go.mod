@@ -1,4 +1,4 @@
-module github/ZR233/gservice
+module github.com/ZR233/gservice
 
 go 1.14
 
