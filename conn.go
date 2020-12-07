@@ -136,7 +136,7 @@ func (c *connPool) getOne() (conn io.Closer, err error) {
 		return
 	}
 
-	if c.connIter == len(connList) {
+	if c.connIter >= len(connList) {
 		c.connIter = 0
 	}
 
